@@ -5,30 +5,34 @@ public class Pizzas {
     private int tipoMasa;
     private int size;
     private boolean rellena;
+    private boolean jamonyork;
     private boolean cebolla;
     private boolean sinGluten;
     private int recojida;
+    private boolean salsa;
 
     // tipo de masa
     public static final int FINA = 0;
     public static final int PAN = 1;
 
     // tamaño de la pizza
-    public static final int SMALL = 0;
-    public static final int MEDIUM = 2;
-    public static final int BIG = 3;
+    public static final int peque = 0;
+    public static final int mediana = 2;
+    public static final int grande = 3;
 
     // recojida
     public static final int TIENDA = 0;
     public static final int PARALLEVAR = 1;
 
     public Pizzas(){
-        this.cebolla = true;
+        this.cebolla = false;
         this.recojida = TIENDA;
         this.rellena = false;
         this.sinGluten = false;
-        this.size = MEDIUM;
+        this.size = mediana;
         this.tipoMasa = FINA;
+        this.salsa=true;
+        this.jamonyork=true;
     }
 
     /**
@@ -95,5 +99,17 @@ public class Pizzas {
 
     public void setRecojida(int recojida) {
         this.recojida = recojida;
+    }
+
+    public boolean isSalsa() {return salsa;}
+
+    public void setSalsa(boolean salsa) {this.salsa = salsa;}
+
+    public boolean isJamonyork() {
+        return jamonyork;
+    }
+
+    public void setJamonyork(boolean jamonyork) {
+        this.jamonyork = jamonyork;
     }
 }

@@ -4,18 +4,29 @@ public class Main {
 
     public static void main(String[] args) {
 
-	    // utilizamos el builder y en concreto el metodo build
-        // para tener nuestra pizza
-	    Pizzas creadaConBuilder = new BuilderPizzas().build();
-	    Pizzas sintaxisEncadenada = new BuilderPizzas()
-                .setCebolla(true)
-                .setSize(Pizzas.BIG)
-                .build();
+        Pizzas PizzaJamon=new Pizzas();
+        Pizzas PizzaMargarita=new Pizzas();
+        /*Para hacer uso del builder vamos a crear una serie de pizzas a nuestro gusto. Una pizza Margarita
+        y una pizza JamonYork*/
 
-	    // aunque el toSpring no está definida, nos valen estas lineas para poner
-        // un punto de ruptura y hacer debug
-        // asi podemos ver los objetos creados
-        System.out.println(creadaConBuilder.toString());
-        System.out.println(sintaxisEncadenada.toString());
+    BuilderPizzas cocina  = new BuilderPizzas();
+
+   cocina.setSize(Pizzas.grande);
+   cocina.setRelleno(false);
+   cocina.setRecojida(1);
+   cocina.setSalsa(true);
+   PizzaJamon=cocina.build();
+        System.out.println(String.valueOf(PizzaJamon));
+
+        BuilderPizzas cocina2 = new BuilderPizzas();
+        cocina.setSize(Pizzas.peque);
+        cocina.setRelleno(true);
+        cocina.setRecojida(0);
+        cocina.setSalsa(true);
+        PizzaMargarita=cocina2.build();
+        System.out.println(String.valueOf(PizzaMargarita));
+
+
+
     }
 }
