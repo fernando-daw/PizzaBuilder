@@ -19,7 +19,6 @@ El patrón Builder es un patrón de diseño creacional que se utiliza para separ
 
 Si tomo el builder para la creacion de bocadillos, creo un Factory que haga que reciba los parametros que considere oportuno y esos sean recibidos en el Main, asi llame al builder y se genere el bocadillo.
 
---Ejemplo de la clase Factory--
 ![bocata](https://user-images.githubusercontent.com/114103916/228599930-c19c33ed-2121-4526-9b57-fb118c5fc03c.png)
 
 
