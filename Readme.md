@@ -11,33 +11,8 @@ El patrón Builder es un patrón de diseño creacional que se utiliza para separ
 
 
 ¿Como es su Diagrama de clases de este ejemplo que has hecho? Realiza en el readme el diagrama
+![bocadillos](https://user-images.githubusercontent.com/114103916/228598401-87ce01ac-25de-4835-b772-59ec9934caf0.png)
 
-+-----------------+           +-----------------------+
-|   Bocadillo     |<>---------|  Bocadillo.BocadilloBuilder |
-+-----------------+           +-----------------------+
-|                 |           | +addIngredientes()       |
-|                 |           | +addMayonesa()          |
-|                 |           | +addKetchup()           |
-+-----------------+           | +build()                |
-                               +-----------------------+
-                                       ^
-                                       |
-                                       |
-+-----------------------+              |
-|    BocadilloFactory    |              |
-+-----------------------+              |
-| +crearBocadillo()      |              |
-+-----------------------+              |
-                   |                   |
-                   |                   |
-                   |implements         |
-                   |                   |
-                   |                   |
-+-------------------------+            |
-|  BocadilloFactoryImpl    |            |
-+-------------------------+            |
-| +crearBocadillo()        |            |
-+-------------------------+            |
 
 
 ¿Podríamos combinarlo con el patrón Factory? Explícalo con algo de código como lo harías
