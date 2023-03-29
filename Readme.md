@@ -23,16 +23,4 @@ Si tomo el builder para la creacion de bocadillos, creo un Factory que haga que 
 ![bocata](https://user-images.githubusercontent.com/114103916/228599930-c19c33ed-2121-4526-9b57-fb118c5fc03c.png)
 
 
-public class BocadilloFactoryImpl implements BocadilloFactory {
-    @Override
-    public Bocadillo crearBocadillo() {
-        String[] ingredientes = {"jamón", "queso", "lechuga"};
-        return new Bocadillo.BocadilloBuilder("pan de molde")
-                        .addIngredientes(ingredientes)
-                        .addMayonesa(false)
-                        .addKetchup(false)
-                        .build();
-    }
-}
-BocadilloFactory fabrica = new BocadilloFactoryImpl();
-Bocadillo miBocadillo = fabrica.crearBocadillo();
+
